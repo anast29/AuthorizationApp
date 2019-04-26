@@ -1,0 +1,15 @@
+<section>
+  <button mat-raised-button color="primary" (click)="login.style.opacity = '1'; login.style.zIndex = '3'">Sign in</button>
+  <div class="social-login" #login>
+    <button mat-icon-button class="close" (click)="login.style.opacity = '0'; login.style.zIndex = '1'">X</button>
+    <h1>Sign in</h1>
+    <div class="row">
+      <button mat-icon-button class="login">
+        <mat-icon aria-label="Facebook button" fontSet="fab" fontIcon="fa-facebook-square fa-5x"></mat-icon>
+      </button>
+      <button mat-icon-button class="login">
+        <mat-icon aria-label="LinkedIn button" fontSet="fab fa-5x" fontIcon="fa-linkedin"></mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
