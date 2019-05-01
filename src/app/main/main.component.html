@@ -1,15 +1,18 @@
 <section>
     <h1>Character list</h1>
-    <!--<form class="example-form">-->
-        <!--<mat-form-field class="example-full-width">-->
-            <!--<input type="text" placeholder="Character name" aria-label="Character name" matInput [formControl]="myControl" [matAutocomplete]="auto">-->
-            <!--<mat-autocomplete #auto="matAutocomplete">-->
-                <!--<mat-option *ngFor="let option of (filteredUsers | async)?.results" [value]="option.name">-->
-                    <!--{{option.name}}-->
-                <!--</mat-option>-->
-            <!--</mat-autocomplete>-->
-        <!--</mat-form-field>-->
-    <!--</form>-->
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Character" aria-label="State" [matAutocomplete]="auto" [formControl]="myControl">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of people?.results; let i = index" [value]="option.name" (click)="autocomplete_mass = option;autocomplete_img = image[i]">
+                    <span>{{option.name}}</span>
+                </mat-option>
+            </mat-autocomplete>
+            <button mat-icon-button  (click)="createProfile(autocomplete_mass, autocomplete_img)">
+                <mat-icon aria-label="Profile button" fontSet="far" fontIcon="fa-arrow-alt-circle-right"></mat-icon>
+            </button>
+        </mat-form-field>
+    </form>
     <div class="card-container">
         <ng-container *ngFor="let human of people?.results; let i = index">
             <mat-card class="example-card" routerLink='/profile' (click)="createProfile(human, image[i])">

@@ -38,7 +38,7 @@ const config = new AuthServiceConfig([
     },
     {
         id: LinkedInLoginProvider.PROVIDER_ID,
-        provider: new LinkedInLoginProvider('770hb6c0888049', true, 'en_US')
+        provider: new LinkedInLoginProvider('770hb6c0888049', false, 'en_US')
     }
 ]);
 export function provideConfig() {

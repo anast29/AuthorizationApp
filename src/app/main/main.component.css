@@ -1,5 +1,5 @@
 section {
-    padding: 3em 1.5em;
+    padding: 1.75em 1.5em;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -14,11 +14,31 @@ h1{
     color: white;
     font-size: 2.5em;
     font-weight: 300;
+    margin: 0.5em 0;
 }
-.mat-form-field-infix {
-    border-bottom: 1px solid white;
+/deep/ .mat-form-field-label {
+    color: white !important;
 }
-
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    color: white;
+}
+input.mat-input-element {
+    color: white;
+}
+.mat-icon-button{
+    bottom: 0;
+    right: 0;
+    height: 35px;
+    position: absolute;
+    color: white;
+}
+.mat-icon {
+    height: 25px !important;
+    width: 25px !important;
+}
+/deep/ .mat-form-field-flex {
+    border-bottom: 1px solid white !important;
+}
 .example-header-image {
     background-size: cover;
 }
@@ -51,12 +71,10 @@ h1{
     transition: 600ms;
     display: flex;
     flex-flow: row wrap;
-    justufy-content: center;
-
     background: url("https://wallpapercave.com/wp/14wJuLo.png") center;
     background-size: cover;
     color: white;
-    height:80px;
+    height:70px;
 }
 .mat-card:hover {
    transform: scale(1.05);

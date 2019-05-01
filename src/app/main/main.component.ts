@@ -16,6 +16,8 @@ import {filter} from 'rxjs/operators';
 export class MainComponent implements OnInit {
     people: People;
     myControl = new FormControl();
+    autocomplete_mass;
+    autocomplete_img;
     image = [
         'https://laughingsquid.com/wp-content/uploads/2016/03/Luke_print_promoHR_1024x1024.jpg',
         'http://th03.deviantart.net/fs71/PRE/f/2010/156/e/8/C_3PO_by_Labancz.jpg',
@@ -28,26 +30,14 @@ export class MainComponent implements OnInit {
         'https://vignette.wikia.nocookie.net/ru.starwars/images/2/20/Biggs.jpg/revision/latest?cb=20120903152541',
         'https://i.playground.ru/i/blog/304935/icon.jpg'
     ];
-    options = [];
-    filteredOptions: Observable<People>;
 
-    constructor(private http: HttpService, private router: Router, private httpClient: HttpClient) {
+    constructor(private http: HttpService, private router: Router) {
     }
 
     ngOnInit() {
         this.http.getPeople().subscribe((data: People) => this.people = data);
-        // this.filteredOptions = this.myControl.valueChanges
-        //     .pipe(
-        //         startWith(''),
-        //         map(value => this.http.getPeople().search({name: value}, 1))
-        // switchMap(value => )
-        //     );
     }
 
-    // private _filter(value: string): People[] {
-    //     return this.people.filter(option =>
-    //         option.toLowerCase().indexOf(value.toLowerCase()) === 0);
-    // }
 
     createProfile(info, img) {
         this.router.navigate(
