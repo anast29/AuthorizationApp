@@ -1,0 +1,74 @@
+section {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 3em;
+    min-height:calc(100vh - 100px);
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.7);
+}
+h1 {
+    font-weight: 400;
+    margin-bottom: 0.15em;
+    color: white;
+}
+h3 {
+    font-weight: 400;
+}
+span {
+    color: rgba(255, 255, 255, 0.54);
+    font-size: 14px;
+    margin: 0;
+}
+.header-content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+.profile-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background-size: cover;
+}
+.mat-accordion.example-headers-align.mat-accordion {
+    width: 70%;
+    margin: 0;
+    font-size: 32px;
+}
+.mat-expansion-panel-header {
+    height: 64px !important;
+    font-size: 18px;
+}
+.mat-icon {
+    height: 26px;
+    width: 26px;
+}
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+    height: 64px;
+}
+.align_content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-right: 2em;
+}
+.title {
+    font-size: 16px;
+    color: grey;
+    text-transform: uppercase;
+    margin:0;
+    letter-spacing: 1px;
+}
+.info {
+    font-size: 16px;
+    margin:0.25em 0 ;
+}

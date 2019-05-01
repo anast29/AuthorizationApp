@@ -1,0 +1,109 @@
+<section>
+    <div class="header-content">
+        <div class="profile-img" [ngStyle]="{'background-image': 'url('+image+')'}"></div>
+        <h1>{{character_name}}</h1>
+        <span>{{gender}}, {{birth_day}}</span>
+    </div>
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Personal info
+                </mat-panel-title>
+                <mat-panel-description>
+                    Information about personal characteristics
+                    <mat-icon fontSet="far" fontIcon="fa-user-circle"></mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+                <mat-list-item>
+                    <div class="align_content">
+                        <p class="title">Height: </p>
+                        <p class="info">{{height}} </p>
+                    </div>
+
+                    <div class="align_content">
+                        <p class="title">Mass: </p>
+                        <p class="info">{{mass}} </p>
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <div class="align_content">
+                        <p class="title">Hair color: </p>
+                        <p class="info">{{hair_color}} </p>
+                    </div>
+
+                    <div class="align_content">
+                        <p class="title">Skin color: </p>
+                        <p class="info">{{skin_color}} </p>
+                    </div>
+                    <div class="align_content">
+                        <p class="title">Eye color: </p>
+                        <p class="info">{{eye_color}} </p>
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <div class="align_content">
+                        <p class="title">Home world: </p>
+                        <p class="info">{{homeworld?.name}} </p>
+                    </div>
+                </mat-list-item>
+            </mat-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Vehicles
+                </mat-panel-title>
+                <mat-panel-description>
+                    Information about vehicles
+                    <mat-icon fontSet="fas" fontIcon="fa-motorcycle"></mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+                <ng-container *ngIf="auto.length !== 0; else elseBlock">
+                    <ng-container *ngFor="let item of auto">
+                        <mat-list-item>
+                            <div class="align_content">
+                                <p class="title">Vehicles name: </p>
+                                <p class="info">{{item?.name}} </p>
+                            </div>
+                            <div class="align_content">
+                                <p class="title">Vehicles model:</p>
+                                <p class="info">{{item?.model}}</p>
+                            </div>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </ng-container>
+                </ng-container>
+                <ng-template #elseBlock>
+                    <mat-list-item>
+                        Vehicles none!
+                    </mat-list-item>
+                </ng-template>
+            </mat-list>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Films
+                </mat-panel-title>
+                <mat-panel-description>
+                    Information about films
+                    <mat-icon fontSet="fas" fontIcon="fa-film"></mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+                <ng-container *ngFor="let item of film; let i = index">
+                    <mat-list-item>
+                        <h3>{{i+1}}. {{item?.title}} </h3>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                </ng-container>
+            </mat-list>
+        </mat-expansion-panel>
+    </mat-accordion>
+</section>

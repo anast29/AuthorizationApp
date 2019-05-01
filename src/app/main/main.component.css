@@ -1,0 +1,76 @@
+section {
+    padding: 3em 1.5em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.mat-form-field-infix {
+    border-bottom: 1px solid white;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+.example-form {
+    width: 100%;
+}
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    margin: 0;
+}
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.mat-card {
+    transition: 600ms;
+    display: flex;
+    flex-flow: row wrap;
+    justufy-content: center;
+
+    background: url("https://wallpapercave.com/wp/14wJuLo.png") center;
+    background-size: cover;
+    color: white;
+    height:80px;
+}
+.mat-card:hover {
+   transform: scale(1.05);
+}
+.mat-icon {
+    height: 18px;
+    width: 18px;
+    margin-top:-1em;
+}
+
+.mat-card-subtitle {
+    color: rgba(255,255,255,0.54)
+}
+.example-card {
+    flex: 1 1 16%;
+    margin: 0.35em;
+}

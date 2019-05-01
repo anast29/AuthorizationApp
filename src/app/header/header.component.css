@@ -1,0 +1,28 @@
+nav{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.mat-card {
+    background: none;
+    box-shadow: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.mat-card-header {
+    align-items: center;
+}
+.mat-card-title {
+    margin-bottom: 0 !important;
+    font-weight: 300;
+}
+.example-header-image {
+    object-fit: cover;
+    height: 64px;
+    width: 64px;
+}

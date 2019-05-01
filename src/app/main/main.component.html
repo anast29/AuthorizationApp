@@ -1,0 +1,25 @@
+<section>
+    <h1>Character list</h1>
+    <!--<form class="example-form">-->
+        <!--<mat-form-field class="example-full-width">-->
+            <!--<input type="text" placeholder="Character name" aria-label="Character name" matInput [formControl]="myControl" [matAutocomplete]="auto">-->
+            <!--<mat-autocomplete #auto="matAutocomplete">-->
+                <!--<mat-option *ngFor="let option of (filteredUsers | async)?.results" [value]="option.name">-->
+                    <!--{{option.name}}-->
+                <!--</mat-option>-->
+            <!--</mat-autocomplete>-->
+        <!--</mat-form-field>-->
+    <!--</form>-->
+    <div class="card-container">
+        <ng-container *ngFor="let human of people?.results; let i = index">
+            <mat-card class="example-card" routerLink='/profile' (click)="createProfile(human, image[i])">
+                <mat-card-header>
+                    <div mat-card-avatar [ngStyle]="{'background-image':'url('+image[i]+')'}" class="example-header-image"></div>
+                    <mat-card-title>{{human?.name}}</mat-card-title>
+                    <mat-card-subtitle>{{human?.gender}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </ng-container>
+    </div>
+
+</section>
