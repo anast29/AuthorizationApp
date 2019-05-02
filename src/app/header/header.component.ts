@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginComponent} from '../login/login.component';
-import {AuthService, SocialUser} from "angularx-social-login";
-import {Router} from "@angular/router";
+import {AuthService} from 'angularx-social-login';
 
 @Component({
     selector: 'app-header',
@@ -13,7 +11,7 @@ export class HeaderComponent implements OnInit {
     user_photo = 'http://clipart-library.com/image_gallery/184187.png';
     private loggedIn: boolean;
 
-    constructor(private authService: AuthService, private router: Router) {
+    constructor(private authService: AuthService) {
     }
 
     ngOnInit() {

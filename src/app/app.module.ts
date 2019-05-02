@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
 import {
     MatAutocompleteModule,
@@ -14,17 +13,18 @@ import {
     MatToolbarModule
 } from '@angular/material';
 import {Router, RouterModule, Routes} from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
+import {LoginComponent} from './login/login.component';
+import {HeaderComponent} from './header/header.component';
+import {MainComponent} from './main/main.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ProfileComponent } from './profile/profile.component';
+import {ProfileComponent} from './profile/profile.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-   FacebookLoginProvider, LinkedInLoginProvider,
-    AuthServiceConfig, SocialLoginModule
+    AuthServiceConfig, FacebookLoginProvider, LinkedInLoginProvider,
+    SocialLoginModule
 } from 'angularx-social-login';
+
 
 const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -38,12 +38,14 @@ const config = new AuthServiceConfig([
     },
     {
         id: LinkedInLoginProvider.PROVIDER_ID,
-        provider: new LinkedInLoginProvider('770hb6c0888049', false, 'en_US')
+        provider: new LinkedInLoginProvider('770hb6c0888049'),
     }
 ]);
+
 export function provideConfig() {
     return config;
 }
+
 @NgModule({
     declarations: [
         AppComponent,
